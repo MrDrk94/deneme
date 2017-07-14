@@ -1,6 +1,6 @@
 package musab;
 
-public class Çalýþmalar {
+public class Ã‡alismalar {
 
 	public static String son_tekrar(String metin,int tekrar){
 		String son="";
