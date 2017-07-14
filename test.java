@@ -5,7 +5,7 @@ public class test {
 static int tarlagenisligi;
 static int domates;
 static int fasulye;
-static int mısır;
+static int misr;
 static double mutluluk;
 
 public static int amac(int d,int m,int f){
@@ -15,15 +15,15 @@ public static int amac(int d,int m,int f){
 	
 }
 
-public static void sayıüret(){
+public static void sayiÃ¼ret(){
 	domates=(int)(Math.random()*3);
-	mısır=(int)(Math.random()*tarlagenisligi/2+1);
+	misir=(int)(Math.random()*tarlagenisligi/2+1);
 	fasulye=(int)(Math.random()*tarlagenisligi/3)+1;
 	
-	while(2*domates+2*mısır+3*fasulye>tarlagenisligi)
+	while(2*domates+2*misir+3*fasulye>tarlagenisligi)
 		{
 			domates=(int)(Math.random()*3);
-			mısır=(int)(Math.random()*tarlagenisligi/2+1);
+			misir=(int)(Math.random()*tarlagenisligi/2+1);
 			fasulye=(int)(Math.random()*tarlagenisligi/3)+1;
 		}
 	
@@ -31,38 +31,38 @@ public static void sayıüret(){
 
 
 public static void main(String[] args) {
-	System.out.println("Tarla genisliğini giriniz");
+	System.out.println("Tarla genisliÃ°ini giriniz");
 		tarlagenisligi=Klavye.intOku();
 		
 		
-		System.out.println("Lütfen başlangıç değerlerinizi kısıtlara dikkat ederek veriniz!!!");
-		System.out.println("(Domates en fazla 2, fasulye en az 1 olmalıdır :)  )");
+		System.out.println("LÃ¼tfen baslngic degerlerinizi kisitlara dikkat ederek veriniz!!!");
+		System.out.println("(Domates en fazla 2, fasulye en az 1 olmalidir :)  )");
 	System.out.println("Domatesi girin");
 		domates=Klavye.intOku();
-	System.out.println("Mısırı girin");
-		mısır=Klavye.intOku();
+	System.out.println("MÃ½sÃ½rÃ½ girin");
+		mÃ½sÃ½r=Klavye.intOku();
 	System.out.println("Fasulye girin");
 		fasulye=Klavye.intOku();
 
-		mutluluk=(amac(domates,mısır,fasulye));
-		System.out.println("Başlangıç çözümü= "+mutluluk);
+		mutluluk=(amac(domates,mÃ½sÃ½r,fasulye));
+		System.out.println("BaÃ¾langÃ½Ã§ Ã§Ã¶zÃ¼mÃ¼= "+mutluluk);
 	
 	int x=0;
 	double temp;
 	double T=100;
 	while(x<1000){
-		sayıüret();
-		temp=amac(domates,mısır,fasulye);
+		sayÃ½Ã¼ret();
+		temp=amac(domates,mÃ½sÃ½r,fasulye);
 		if(temp>mutluluk)
 		{
 			mutluluk=temp;
-			System.out.println("Domates: "+domates+"\t Mısır: "+mısır+"\t Fasulye: "+fasulye+"\t Mutluluk Değeri: "+mutluluk);
+			System.out.println("Domates: "+domates+"\t MÃ½sÃ½r: "+mÃ½sÃ½r+"\t Fasulye: "+fasulye+"\t Mutluluk DeÃ°eri: "+mutluluk);
 		}
 		else
 			if(Math.exp((temp-mutluluk)/T)>Math.random()*1)
 			{
 					mutluluk=temp;	
-					System.out.println("Domates: "+domates+"\t Mısır: "+mısır+"\t Fasulye: "+fasulye+"\t Mutluluk Değeri: "+mutluluk);
+					System.out.println("Domates: "+domates+"\t MÃ½sÃ½r: "+mÃ½sÃ½r+"\t Fasulye: "+fasulye+"\t Mutluluk DeÃ°eri: "+mutluluk);
 			}
 		x++;
 		if(x%3==0)
